@@ -1,0 +1,2 @@
+npm install eslint-config-prettier eslint-plugin-prettier prettier lint-staged husky --save-dev
+для корректной работы вам потребуется парочка плагинов из маркет-плейса (eslint и prettier).
