@@ -1,9 +1,14 @@
 # ReactRouterTestApp
-ReactJS+Router+Redux+Bootstrap
+Use of ReactJS+Router+Redux+Bootstrap
 
-To install dependencies: npm install
-To run app: npm start
-
+To install dependencies: 
+```shell
+npm install
+```
+To run app: 
+```shell
+npm start
+```
 # Task
 https://vk.com/@maxpfrontend-testovoe-zadanie-1
 
