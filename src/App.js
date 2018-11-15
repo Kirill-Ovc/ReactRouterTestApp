@@ -1,14 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { Navbar, Nav, NavLink, NavItem } from 'reactstrap'
-//import './App.css'
-import Home from './components/Home'
-import BookList from './components/BookList'
-import NewsContainer from './containers/NewsContainer'
-import ProfileContainer from './containers/ProfileContainer'
-import LoginContainer from './containers/LoginContainer'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import PrivateRoute from './containers/PrivateRoute'
 import NotFound from './components/NotFound'
+import { routes } from './routes'
+import NavigationBar from './components/NavigationBar'
 
 const App = () => (
   <Router>
@@ -55,12 +50,10 @@ const App = () => (
           <Route path="/about" render={About} />
           <Route component={NotFound} />
         </Switch>
+        </div>
       </div>
-    </div>
-
-  </Router>
-)
-
-const About = () => <p>Тестовое приложение. Сделано на ReactJS+Router+Redux+Bootstrap</p>
+    </Router>
+  )
+}
 
 export default App
