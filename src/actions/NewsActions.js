@@ -7,7 +7,6 @@ let cached = false
 
 const newsAPIurl = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=8b9495da70cd4b10a74b003961c379c9'
 
-// Этот экшн не использую, но стоит наверное сделать, чтобы новости не загружались каждый раз
 export function getNews() {
   return function (dispatch) {
     if (cached) {

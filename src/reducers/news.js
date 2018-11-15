@@ -11,7 +11,9 @@ export default (state = initialState, action) => {
     case GET_NEWS_REQUEST:
       return { ...state, news: action.payload.data, isLoading: true, errorMsg: '' }
     case GET_NEWS_SUCCESS:
-      return { ...state, news: action.payload.data, isLoading: false, errorMsg: '' }
+      return (action.payload.data.length)
+        ? { ...state, news: action.payload.data, isLoading: false, errorMsg: '' }
+        : { ...state, news: action.payload.data, isLoading: false, errorMsg: 'Новостей нет' }
     case GET_NEWS_FAIL:
       return { ...state, errorMsg: action.payload.message, isLoading: false }
     default:
