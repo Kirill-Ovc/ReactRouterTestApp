@@ -43,5 +43,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "homepage": "http://kirill-ovc.github.io/ReactRouterTestApp/"
 }

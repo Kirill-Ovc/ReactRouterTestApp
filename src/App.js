@@ -6,6 +6,7 @@ import { routes } from './routes'
 import NavigationBar from './components/NavigationBar'
 
 const App = () => {
+  const appPath = window.location.pathname.replace(/\/$/, "");
   const renderSwitch = () => (
     <Switch>
       {routes.map(route => {
@@ -14,7 +15,7 @@ const App = () => {
           <RouteType
             key={route.path}
             exact={route.isExact}
-            path={route.path}
+            path={appPath + route.path}
             component={route.component || NotFound}
           />
         )
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <NavigationBar routes={routes} />
+        <NavigationBar routes={routes} appPath={appPath} />
         <hr />
         <div className="centerBlock">
           {renderSwitch()}
