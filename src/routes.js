@@ -5,6 +5,10 @@ import ProfileContainer from './containers/ProfileContainer'
 import LoginContainer from './containers/LoginContainer'
 import About from './components/About'
 
+// App relative path only in propuction 
+// Relative paths dont work properly. Its better to place App in root.
+export const appProdPath = "/ReactRouterTestApp"
+
 export const routes = [
   {
     isNavBar: true,

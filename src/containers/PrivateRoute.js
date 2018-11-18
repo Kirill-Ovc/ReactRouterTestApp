@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Redirect } from 'react-router-dom'
+import { appProdPath } from '../routes'
 
 const needAuth = 'Необходимо авторизоваться для просмотра этой страницы'
+const appPath = appProdPath
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
@@ -14,7 +16,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         ) : (
             <Redirect
               to={{
-                pathname: '/login',
+                pathname: appPath + '/login',
                 state: {
                   from: props.location,
                   errorMsg: needAuth,
